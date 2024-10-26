@@ -1,0 +1,141 @@
+/* Основной стиль для страницы */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6e7dff, #c3cfe2); /* Градиентный фон */
+}
+
+/* Контейнер музыкального плеера */
+.music-player {
+    width: 350px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+    border-radius: 20px; /* Сглаженные углы */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Более выразительная тень */
+    text-align: center;
+    animation: fadeIn 0.5s ease; /* Анимация при загрузке */
+}
+
+/* Анимация при загрузке */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стиль обложки трека */
+#track-cover {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Заголовок трека и имя исполнителя */
+.track-info h3 {
+    font-size: 22px;
+    margin: 5px 0;
+    color: #343a40; /* Темный цвет текста */
+}
+
+.track-info p {
+    font-size: 16px;
+    color: #6c757d; /* Более светлый цвет для исполнителя */
+    margin: 0;
+}
+
+/* Кнопки управления */
+.controls {
+    display: flex; /* Флекс-контейнер для кнопок */
+    justify-content: center; /* Выравнивание кнопок по центру */
+    margin: 15px 0; /* Отступ сверху и снизу */
+}
+
+.controls button {
+    width: 60px; /* Ширина кнопок */
+    height: 60px; /* Высота кнопок */
+    margin: 0 5px; /* Горизонтальные отступы между кнопками */
+    border: none;
+    background-color: #007bff; /* Основной цвет */
+    color: #ffffff;
+    border-radius: 50%; /* Круглые кнопки */
+    cursor: pointer;
+    font-size: 24px; /* Увеличенный размер шрифта */
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s; /* Плавный переход */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для кнопок */
+}
+
+.controls button:hover {
+    background-color: #0056b3; /* Цвет при наведении */
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+.controls button:active {
+    transform: scale(0.95); /* Сжатие при нажатии */
+}
+
+/* Список треков */
+#track-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#track-list li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #007bff;
+    transition: background-color 0.2s;
+}
+
+#track-list li:hover {
+    background-color: #f1f1f1; /* Цвет фона при наведении */
+}
+
+/* Ползунки громкости и прогресса */
+.extra-controls {
+    margin-top: 15px;
+}
+
+.extra-controls input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    cursor: pointer; /* Указатель при наведении */
+    transition: background 0.3s; /* Плавный переход для ползунков */
+}
+
+/* Плавный эффект для ползунков */
+.extra-controls input[type="range"]:hover {
+    background: #007bff; /* Изменение цвета фона при наведении */
+}
+
+.extra-controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тень для ползунка */
+}
+
+.extra-controls input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тень для ползунка */
+}

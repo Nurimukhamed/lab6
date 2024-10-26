@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный Плеер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-player">
+        <img id="track-cover" src="" alt="Обложка трека">
+        <div class="track-info">
+            <h3 id="track-title">Название трека</h3>
+            <p id="track-artist">Имя исполнителя</p>
+        </div>
+        <audio id="audio"></audio>
+        <div class="controls">
+            <button id="play-pause">Play</button>
+            <button id="next">Next</button>
+        </div>
+        <ul id="track-list">
+            <!-- Список треков будет добавлен динамически -->
+        </ul>
+        <div class="extra-controls">
+            <input type="range" id="progress" value="0" max="100">
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
